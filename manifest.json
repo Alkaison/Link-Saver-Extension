@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Link Saver",
+  "description": "Save your social media links to use them efficiently on browser.",
+  "version": "0.0.1",
+  "action": {
+    "default_popup": "./popup/index.html",
+    "default_icon": "./images/icon.png"
+  },
+  "icons": {
+    "64": "./images/icon.png"
+  },
+  "permissions": ["activeTab"]
+}

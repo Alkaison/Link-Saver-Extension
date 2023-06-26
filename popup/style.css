@@ -10,9 +10,7 @@ body {
     background-color: black;
 }
 
-.container {
-
-}
+/* NavBar section */
 .navbar-section {
     width: 100%;
     display: flex;
@@ -36,4 +34,58 @@ body {
     font-size: 24px;
     font-weight: bold;
     user-select: none;
+}
+/* Task Addition Section */
+.task-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgb(85, 82, 82);
+}
+#newLinkBtn {
+    width: 70%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    border: 2px solid transparent;
+    outline: transparent;
+    background-color: rgb(109, 108, 108);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+#newLinkBtn i {
+    font-size: 20px;
+}
+#btnText {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+#newLinkBtn:hover, #newLinkBtn:active {
+    background-color: rgba(109, 108, 108, 0.7);
+}
+#githubBtn {
+    width: 10%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid transparent;
+    outline: transparent;
+    background-color: rgb(109, 108, 108);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+}
+#githubBtn i {
+    font-size: 22px;
+}
+#githubBtn:hover, #githubBtn:active {
+    background-color: rgba(109, 108, 108, 0.7);
 }

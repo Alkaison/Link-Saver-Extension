@@ -107,6 +107,7 @@ body {
     outline: transparent;
     font-size: 16px;
 }
+/* Add New Link Buttons */
 .confirmInput {
     display: flex;
     justify-content: center;
@@ -125,9 +126,23 @@ body {
     cursor: pointer;
 }
 .addBtn {
-    background-color: rgb(27, 225, 31);
+    color: rgb(27, 225, 31);
+    border: 1px solid rgb(27, 225, 31);
+    background-color: transparent;
 }
 .cancelBtn {
+    color: red;
+    border: 1px solid red;
+    background-color: transparent;
+}
+.addBtn:hover, .addBtn:active {
+    color: black;
+    background-color: rgb(27, 225, 31);
+    border: 1px solid transparent;
+}
+.cancelBtn:hover, .cancelBtn:active {
+    color: black;
+    border: 1px solid transparent;
     background-color: red;
 }
 /* Links Container */

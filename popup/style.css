@@ -107,6 +107,29 @@ body {
     outline: transparent;
     font-size: 16px;
 }
+.confirmInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 12px 0 0;
+}
+.addBtn, .cancelBtn {
+    padding: 8px 12px;
+    outline: transparent;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.addBtn {
+    background-color: rgb(27, 225, 31);
+}
+.cancelBtn {
+    background-color: red;
+}
 /* Links Container */
 .links-container {
     overflow: auto;

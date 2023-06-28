@@ -89,6 +89,24 @@ body {
 #githubBtn:hover, #githubBtn:active {
     background-color: rgba(109, 108, 108, 0.7);
 }
+/* Add New Link */
+.addNewLink {
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-bottom: 1px solid rgb(85, 82, 82);
+}
+.nameInput, .linkInput {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #c8d3f5;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    outline: transparent;
+    font-size: 16px;
+}
 /* Links Container */
 .links-container {
     overflow: auto;
@@ -101,7 +119,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: black;
-    background-color: #a2accc;
+    background-color: #9dafec;
     border-radius: 8px;
 }
 .link-context {

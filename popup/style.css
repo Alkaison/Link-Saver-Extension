@@ -89,3 +89,55 @@ body {
 #githubBtn:hover, #githubBtn:active {
     background-color: rgba(109, 108, 108, 0.7);
 }
+/* Links Container */
+.links-container {
+    overflow: auto;
+}
+/* Link */
+.link {
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: #a2accc;
+    border-radius: 8px;
+}
+.link-context {
+    width: 90%;
+}
+.link-title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+}
+.link-desc {
+    margin-bottom: 4px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+.link-date {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+.link-button {
+    opacity: 0;
+    transition: opacity .5s ease-in;
+}
+.link:hover .link-button{
+    opacity: 1;
+}
+.link-delete {
+    background-color: transparent;
+    outline: transparent;
+    border: 1px solid transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
+.link-delete:hover i {
+    color: rgb(204, 20, 20);
+}

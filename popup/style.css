@@ -145,6 +145,17 @@ body {
     border: 1px solid transparent;
     background-color: red;
 }
+/* Input Error Message */
+.inputError {
+    display: none;
+    margin-bottom: 4px;
+    color: red;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+.inputError.active {
+    display: block;
+}
 /* Links Container */
 .links-container {
     overflow: auto;

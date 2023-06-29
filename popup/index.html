@@ -28,12 +28,18 @@
 
         <!-- Add New Link Inputs -->
         <div class="addNewLink">
-            <input class="nameInput" id="name" type="text" placeholder="example"> <br>
-            <input class="linkInput" id="link" type="url" placeholder="https://example.com/username">
-            <div class="confirmInput">
-                <button type="button" class="addBtn">Confirm</button>
-                <button type="button" class="cancelBtn">Cancel</button>
-            </div>
+            <form name="New Link">
+                <p class="inputError">Name input cannot be empty.</p>
+                <input class="nameInput" id="name" type="text" required placeholder="example"> <br> <br>
+
+                <p class="inputError">Input must be a valid URL.</p>
+                <input class="linkInput" id="link" type="url" required placeholder="https://example.com/username"> <br> <br>
+
+                <div class="confirmInput">
+                    <button type="button" class="addBtn">Confirm</button>
+                    <button type="button" class="cancelBtn">Cancel</button>
+                </div>
+            </form>
         </div>
 
         <!-- Links Display -->

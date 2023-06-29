@@ -66,7 +66,7 @@ body {
     font-size: 20px;
     letter-spacing: 0.5px;
 }
-#newLinkBtn:hover, #newLinkBtn:active {
+#newLinkBtn:enabled #newLinkBtn:hover, #newLinkBtn:enabled #newLinkBtn:active {
     background-color: rgba(109, 108, 108, 0.7);
 }
 #githubBtn {
@@ -93,7 +93,7 @@ body {
 .addNewLink {
     width: 100%;
     padding: 14px;
-    display: flex;
+    display: none;
     flex-direction: column;
     color: white;
     border-bottom: 1px solid rgb(85, 82, 82);

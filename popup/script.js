@@ -1,5 +1,5 @@
 const addNewLinkBtn = document.querySelector("#newLinkBtn");
-const githubBtn = document.querySelector("#githubBtn");
+const taskSectionBtn = document.querySelector(".task-section");
 const nameInput = document.querySelector(".nameInput");
 const linkInput = document.querySelector(".linkInput");
 const inputContainer = document.querySelector(".addNewLink");
@@ -59,13 +59,17 @@ const clearInputs = () => {
     addNewLinkBtn.style.cursor = "pointer";
 }
 
-// Open GitHub repo on click over GitHub logo 
-githubBtn.addEventListener("click", () => {
-    window.open("https://github.com/Alkaison/Link-Saver-Extension/");
-});
+// check clicked button 
+taskSectionBtn.addEventListener("click", (e) => {
+    const clickedBtn = (e.target.tagName === "BUTTON") ? e.target : e.target.parentElement;
+    const getIdName = clickedBtn.id;
 
-// display the popup for inputs when click over addNewLink button 
-addNewLinkBtn.addEventListener("click", getNewLink);
+    if(getIdName === "newLinkBtn")
+        getNewLink();
+    else if (getIdName === "githubBtn")
+        window.open("https://github.com/Alkaison/Link-Saver-Extension/");
+
+});
 
 // check clicked button 
 confirmBtn.addEventListener("click", (e) => {

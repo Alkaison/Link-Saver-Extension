@@ -15,26 +15,29 @@ const validateInputs = () => {
 
     let emptyInput = false;
 
-    if(nameInput.value === '')
-    {
-        nameInput.previousElementSibling.classList.add("active");
+    const handleEmptyInput = (input) => {
+        input.previousElementSibling.classList.add("active");
         emptyInput = true;
-    }
-    else
-        nameInput.previousElementSibling.classList.remove("active");
-    
-    if(linkInput.value === '' || !(linkInput.validity.valid))
-    {
-        linkInput.previousElementSibling.classList.add("active");
-        emptyInput = true;
-    }
+    };
 
-    if(emptyInput)
+    const handleValidInput = (input) => {
+        input.previousElementSibling.classList.remove("active");
+    };
+
+    if (nameInput.value === '')
+        handleEmptyInput(nameInput);
+    else
+        handleValidInput(nameInput);
+
+    if (linkInput.value === '' || !(linkInput.validity.valid))
+        handleEmptyInput(linkInput);
+    else
+        handleValidInput(linkInput);
+
+    if (emptyInput)
         return false;
     else
     {
-        linkInput.previousElementSibling.classList.remove("active");
-
         console.log(nameInput.value);
         console.log(linkInput.value);
     }

@@ -11,6 +11,10 @@ const getNewLink = () => {
     addNewLinkBtn.style.cursor = "not-allowed";
 }
 
+const saveNewLink = (name, link) => {
+    // get users input and save into storage  
+}
+
 const validateInputs = () => {
 
     let emptyInput = false;
@@ -37,10 +41,7 @@ const validateInputs = () => {
     if (emptyInput)
         return false;
     else
-    {
-        console.log(nameInput.value);
-        console.log(linkInput.value);
-    }
+        saveNewLink(nameInput.value, linkInput.value);
 }
 
 const clearInputs = () => {

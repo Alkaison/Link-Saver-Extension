@@ -186,11 +186,6 @@ body {
     font-style: italic;
     letter-spacing: 0.5px;
 }
-.link-date {
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 12px;
-    letter-spacing: 0.5px;
-}
 .link-button {
     opacity: 0;
     transition: opacity .5s ease-in;

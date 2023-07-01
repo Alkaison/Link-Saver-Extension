@@ -14,20 +14,10 @@ const getNewLink = () => {
 
 const addLinkToDisplay = (name, link) => {
 
-    // get current month and day 
-    const date = new Date();
-
-    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
-    const month = months[date.getMonth()];
-
-    const today = date.getDate();
-    const newDate = today < 10 ? '0' + today : today;
-
     const linkContentBody = `<div class="link">
                                 <div class="link-context">
                                     <p class="link-title">$${name}</p>
                                     <p class="link-desc">${link}</p>
-                                    <p class="link-date"><i class="fa-regular fa-calendar"></i> ${month} ${newDate}</p>
                                 </div>
 
                                 <div class="link-button">
@@ -123,3 +113,20 @@ confirmBtn.addEventListener("click", (e) => {
     else if(getClassName === "cancelBtn")
         clearInputs();
 });
+
+// load key, value pairs data from chrome local storage 
+const loadData = async () => {
+    
+    const data = await new Promise((resolve) => {
+        chrome.storage.local.get(null, (result) => {
+            if (result === null || result === undefined) {
+                resolve([]);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+
+    const jsonData = JSON.stringify(data);
+    return jsonData;
+};

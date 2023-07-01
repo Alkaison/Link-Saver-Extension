@@ -36,7 +36,7 @@ const addLinkToDisplay = (name, link) => {
                             </div>`;
 
     // append it into container 
-    linkContainer.append(linkContentBody);
+    linkContainer.insertAdjacentHTML("beforeend", linkContentBody);
 
     // disable the input box 
     clearInputs();
@@ -45,8 +45,8 @@ const addLinkToDisplay = (name, link) => {
 const saveNewLink = (username, link) => {
 
     // Convert the username and link to strings 
-    const stringUsername = String(username).toLowerCase().replaceAll(' ', '_');
-    const stringLink = String(link);
+    const stringUsername = String(username).trim().toLowerCase().replaceAll(' ', '_');
+    const stringLink = String(link).trim();
 
     // Store the value in Chrome's local storage 
     chrome.storage.local.set({

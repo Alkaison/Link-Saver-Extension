@@ -36,13 +36,16 @@ const addLinkToDisplay = (name, link) => {
                             </div>`;
 
     // append it into container 
-    linkContainer.appendChild(linkContentBody);
+    linkContainer.append(linkContentBody);
+
+    // disable the input box 
+    clearInputs();
 }
 
 const saveNewLink = (username, link) => {
 
     // Convert the username and link to strings 
-    const stringUsername = String(username);
+    const stringUsername = String(username).toLowerCase().replaceAll(' ', '_');
     const stringLink = String(link);
 
     // Store the value in Chrome's local storage 

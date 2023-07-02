@@ -46,6 +46,12 @@ const saveNewLink = (username, link) => {
     });
 }
 
+// delete the saved link from storage 
+const deleteLink = (linkData) => {
+    
+    console.log(linkData);
+}
+
 const validateInputs = () => {
 
     let emptyInput = false;
@@ -114,6 +120,15 @@ confirmBtn.addEventListener("click", (e) => {
         clearInputs();
 });
 
+// check delete button click 
+linkContainer.addEventListener("click", (e) => {
+
+    const getClickedLink = (e.target.tagName === "BUTTON" && e.target.className === "link-delete") ? e.target.parentElement.parentElement : (e.target.className === "fa-solid fa-trash") ? e.target.parentElement.parentElement.parentElement : null;
+
+    if(getClickedLink)
+        deleteLink(getClickedLink);
+});
+
 // load key, value pairs data from chrome local storage 
 const loadData = async () => {
     
@@ -148,8 +163,6 @@ const fetchInitialData = async () => {
 
         // append it into container 
         linkContainer.insertAdjacentHTML("beforeend", noLinkFound);
-
-        console.log('Returned empty object {}');
     } 
     else 
     {
@@ -168,10 +181,7 @@ const fetchInitialData = async () => {
         
             // append it into container 
             linkContainer.insertAdjacentHTML("beforeend", linkContentBody);
-
-            console.log(`Key: ${key} Value: ${parsedData[key]}`);
         }
-        console.log('Returned data:', parsedData);
     }
 }
 

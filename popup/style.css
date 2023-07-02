@@ -205,7 +205,7 @@ body {
 }
 /* No Links Found */
 .noLinkFound {
-    padding: 4px 8px;
+    padding: 8px;
     text-align: center;
     color: white;
     font-size: 16px;

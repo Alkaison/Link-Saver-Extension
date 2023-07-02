@@ -12,26 +12,6 @@ const getNewLink = () => {
     addNewLinkBtn.style.cursor = "not-allowed";
 }
 
-const addLinkToDisplay = (name, link) => {
-
-    const linkContentBody = `<div class="link">
-                                <div class="link-context">
-                                    <p class="link-title">$${name}</p>
-                                    <p class="link-desc">${link}</p>
-                                </div>
-
-                                <div class="link-button">
-                                    <button class="link-delete" title="Delete" type="button"><i class="fa-solid fa-trash"></i></button>
-                                </div>
-                            </div>`;
-
-    // append it into container 
-    linkContainer.insertAdjacentHTML("beforeend", linkContentBody);
-
-    // disable the input box 
-    clearInputs();
-}
-
 const saveNewLink = (username, link) => {
 
     // Convert the username and link to strings 
@@ -42,14 +22,19 @@ const saveNewLink = (username, link) => {
     chrome.storage.local.set({
         [stringUsername]: stringLink
     }).then(() => {
-        addLinkToDisplay(stringUsername, stringLink);
+        clearInputs();
+        fetchInitialData();
     });
 }
 
 // delete the saved link from storage 
 const deleteLink = (linkData) => {
-    
-    console.log(linkData);
+
+    const linkName = linkData.querySelector(".link-title").textContent.substring(1);
+
+    chrome.storage.local.remove(linkName).then(() => {
+        fetchInitialData();
+    });
 }
 
 const validateInputs = () => {
@@ -158,7 +143,7 @@ const fetchInitialData = async () => {
     if (Object.keys(parsedData).length === 0 && parsedData.constructor === Object) 
     {
         const noLinkFound = `<div class="noLinkFound">
-                                <p>No links found, please try add one by clicking the "+ Add Link" button.</p>
+                                <p>No links found, please try to add one by clicking the "+ Add Link" button.</p>
                             </div>`;
 
         // append it into container 

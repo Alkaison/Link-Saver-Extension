@@ -130,3 +130,50 @@ const loadData = async () => {
     const jsonData = JSON.stringify(data);
     return jsonData;
 };
+
+// list all the data from chrome storage to the UI 
+const fetchInitialData = async () => {
+    
+    const jsonData = await loadData();
+    const parsedData = JSON.parse(jsonData);
+
+    linkContainer.innerHTML = '';
+
+    // check whether the data is empty or not 
+    if (Object.keys(parsedData).length === 0 && parsedData.constructor === Object) 
+    {
+        const noLinkFound = `<div class="noLinkFound">
+                                <p>No links found, please try add one by clicking the "+ Add Link" button.</p>
+                            </div>`;
+
+        // append it into container 
+        linkContainer.insertAdjacentHTML("beforeend", noLinkFound);
+
+        console.log('Returned empty object {}');
+    } 
+    else 
+    {
+        for(const key in parsedData)
+        {
+            const linkContentBody = `<div class="link">
+                                        <div class="link-context">
+                                            <p class="link-title">$${key}</p>
+                                            <p class="link-desc">${parsedData[key]}</p>
+                                        </div>
+        
+                                        <div class="link-button">
+                                            <button class="link-delete" title="Delete" type="button"><i class="fa-solid fa-trash"></i></button>
+                                        </div>
+                                    </div>`;
+        
+            // append it into container 
+            linkContainer.insertAdjacentHTML("beforeend", linkContentBody);
+
+            console.log(`Key: ${key} Value: ${parsedData[key]}`);
+        }
+        console.log('Returned data:', parsedData);
+    }
+}
+
+// initial fetching data from storage 
+fetchInitialData();

@@ -1,27 +1,32 @@
 {
-  "manifest_version": 3,
-  "name": "Link Saver",
-  "description": "Link Saver is a powerful Chrome extension tool designed to help users save their social media handle links and conveniently access them whenever needed by using simple shortcuts.",
-  "version": "0.0.3",
-  "action": {
-    "default_popup": "./popup/index.html",
-    "default_icon": "./images/icon.png"
-  },
-  "icons": {
-    "64": "./images/icon.png"
-  },
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
-  "content_scripts": [
-    {
-      "js": [
-        "./scripts/content.js"
-      ],
-      "matches": [
-        "<all_urls>"
-      ]
-    }
-  ]
+    "manifest_version": 3,
+    "name": "Link Saver",
+    "description": "Link Saver is a powerful Chrome extension tool designed to help users save their social media handle links and conveniently access them whenever needed by using simple shortcuts.",
+    "version": "0.0.3",
+    "action": {
+        "default_popup": "./popup/index.html",
+        "default_icon": "./images/icon.png"
+    },
+    "icons": {
+        "16": "./images/icon-16.svg",
+        "32": "./images/icon-32.svg",
+        "48": "./images/icon-48.svg",
+        "64": "./images/icon-64.svg",
+        "128": "./images/icon-128.svg",
+        "256": "./images/icon-256.svg"
+    },
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "./scripts/content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
 }

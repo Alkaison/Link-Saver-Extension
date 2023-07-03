@@ -1,4 +1,4 @@
-# Link Saver - Chrome Extension [(v0.0.1 Alpha)](https://github.com/Alkaison/Link-Saver-Extension/releases)
+# Link Saver - Chrome Extension [(v0.0.3)](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v0.0.3)
 
 The Link Saver Chrome Extension is a powerful tool designed to help users save their social media handle links and conveniently access them whenever needed. With this extension, users can store their social media account URLs and easily insert them into any input box by using simple shortcuts.
 
@@ -6,7 +6,7 @@ The Link Saver Chrome Extension is a powerful tool designed to help users save t
 
 - Save social media account links: Users can add and store their social media handle links within the extension popup.
 - Shortcut substitution: By typing specific shortcuts such as `$twitter` or `$linkedin` in any input box, the corresponding shortcut will be replaced with the user's saved link for that social media platform.
-- Easy management: The extension provides a user-friendly interface for adding, editing, and deleting social media account links.
+- Easy management: The extension provides a user-friendly interface for adding and deleting social media account links.
 - Secure storage: Social media account links are securely stored within the extension and remain accessible only to the user.
 
 ## Disclaimer ⚠️
@@ -28,9 +28,9 @@ To get started with the Link Saver Chrome Extension, follow these steps:
 Once the extension is installed, follow these steps to save and use your social media account links:
 
 1. Click on the extension icon in the Chrome toolbar to open the extension popup.
-2. In the popup, click on the "Add New Link" button.
+2. In the popup, click on the "Add Link" button.
 3. Enter a label for the social media platform (e.g., "Twitter") and the corresponding URL for your account.
-4. Click "Save" to store the link.
+4. Click "Confirm" to store the link.
 5. Repeat steps 2-4 for any other social media accounts you wish to save.
 6. To use a saved link, simply type the corresponding shortcut (e.g., `$twitter` or `$linkedin`) in any input box, and it will be replaced with the saved link.
 

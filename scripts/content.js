@@ -29,16 +29,15 @@ const checkInputElement = async (e) => {
             const jsonData = await loadData();
             const parsedData = JSON.parse(JSON.stringify(jsonData));
 
-            const getKey = value.substring(getIndexOfSign + 1);
+            // check keys using regex 
+            const regex = /\$([a-zA-Z]+)/g;
+            e.target.value = value.replaceAll(regex, (match, getKey) => {
 
-            for(const key in parsedData)
-            {
-                if(getKey === key)
-                {
-                    const stringWord = '$' + getKey;
-                    e.target.value = e.target.value.replace(stringWord, parsedData[key]);
-                }
-            }
+                if (parsedData.hasOwnProperty(getKey))
+                    return parsedData[getKey];
+                
+                return match;
+            });
         }
     }
 };

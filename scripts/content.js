@@ -3,14 +3,21 @@ let intervalTimer;
 // Load key-value pairs data from Chrome local storage 
 const loadData = () => {
     return new Promise((resolve) => {
-        chrome.storage.local.get(null, (result) => {
-            if (result === null || result === undefined)
-                resolve([]);
-            else
-                resolve(result);
-        });
+        if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local)
+        {
+            chrome.storage.local.get(null, (result) => {
+                if (chrome.runtime.lastError) {
+                    resolve([]);
+                } else {
+                    resolve(result);
+                }
+            });
+        } 
+        else {
+            resolve([]);
+        }
     });
-};
+}
 
 // Check if the input element is a text box 
 const checkInputElement = async (e) => {

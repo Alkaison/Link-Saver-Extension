@@ -115,15 +115,21 @@ linkContainer.addEventListener("click", (e) => {
 // load key, value pairs data from chrome local storage 
 const loadData = () => {
     return new Promise((resolve) => {
-        chrome.storage.local.get(null, (result) => {
-            if (result === null || result === undefined) {
-                resolve([]);
-            } else {
-                resolve(result);
-            }
-        });
+        if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local)
+        {
+            chrome.storage.local.get(null, (result) => {
+                if (chrome.runtime.lastError) {
+                    resolve([]);
+                } else {
+                    resolve(result);
+                }
+            });
+        } 
+        else {
+            resolve([]);
+        }
     });
-};
+}
 
 // list all the data from chrome storage to the UI 
 const fetchInitialData = async () => {

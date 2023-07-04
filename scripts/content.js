@@ -22,14 +22,24 @@ const checkInputElement = async (e) => {
         const inputElement = e.target;
         const value = inputElement.value;
 
-        const getIndexOfSign = value.lastIndexOf("$") + 1;
+        const getIndexOfSign = value.lastIndexOf("$");
 
-        if (getIndexOfSign !== -1) {
+        if (getIndexOfSign !== -1)
+        {
             const jsonData = await loadData();
             const parsedData = JSON.parse(JSON.stringify(jsonData));
-            console.log(parsedData);
+
+            const getKey = value.substring(getIndexOfSign + 1);
+
+            for(const key in parsedData)
+            {
+                if(getKey === key)
+                {
+                    const stringWord = '$' + getKey;
+                    e.target.value = e.target.value.replace(stringWord, parsedData[key]);
+                }
+            }
         }
-        console.log("Done 100!");
     }
 };
 

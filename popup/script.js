@@ -18,37 +18,35 @@ const saveNewLink = (username, link) => {
     const stringUsername = String(username).trim().toLowerCase().replaceAll(' ', '_');
     const stringLink = String(link).trim();
 
-    // Store the value in Chrome's local storage 
-    chrome.storage.local.set({
+    const data = {
         [stringUsername]: stringLink
-    }).then(() => {
+    };
+
+    chrome.storage.local.set(data, () => {
         clearInputs();
         fetchInitialData();
     });
 }
 
-// delete the saved link from storage 
 const deleteLink = (linkData) => {
-
     const linkName = linkData.querySelector(".link-title").textContent.substring(1);
 
-    chrome.storage.local.remove(linkName).then(() => {
+    chrome.storage.local.remove(linkName, () => {
         fetchInitialData();
     });
 }
 
 const validateInputs = () => {
-
     let emptyInput = false;
 
     const handleEmptyInput = (input) => {
         input.previousElementSibling.classList.add("active");
         emptyInput = true;
-    };
+    }
 
     const handleValidInput = (input) => {
         input.previousElementSibling.classList.remove("active");
-    };
+    }
 
     if (nameInput.value === '')
         handleEmptyInput(nameInput);
@@ -115,9 +113,8 @@ linkContainer.addEventListener("click", (e) => {
 });
 
 // load key, value pairs data from chrome local storage 
-const loadData = async () => {
-    
-    const data = await new Promise((resolve) => {
+const loadData = () => {
+    return new Promise((resolve) => {
         chrome.storage.local.get(null, (result) => {
             if (result === null || result === undefined) {
                 resolve([]);
@@ -126,16 +123,14 @@ const loadData = async () => {
             }
         });
     });
-
-    const jsonData = JSON.stringify(data);
-    return jsonData;
 };
 
 // list all the data from chrome storage to the UI 
 const fetchInitialData = async () => {
-    
-    const jsonData = await loadData();
-    const parsedData = JSON.parse(jsonData);
+
+    // get data from chrome storage 
+    const data = await loadData();
+    const parsedData = JSON.parse(JSON.stringify(data));
 
     linkContainer.innerHTML = '';
 
@@ -146,7 +141,6 @@ const fetchInitialData = async () => {
                                 <p>No links found, please try to add one by clicking the "+ Add Link" button.</p>
                             </div>`;
 
-        // append it into container 
         linkContainer.insertAdjacentHTML("beforeend", noLinkFound);
     } 
     else 

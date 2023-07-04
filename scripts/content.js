@@ -30,13 +30,13 @@ const checkInputElement = async (e) => {
             const parsedData = JSON.parse(JSON.stringify(jsonData));
 
             // check keys using regex 
-            const regex = /\$([a-zA-Z]+)/g;
+            const regex = /\$([a-zA-Z0-9]+)/g;
             e.target.value = value.replaceAll(regex, (match, getKey) => {
 
                 if (parsedData.hasOwnProperty(getKey))
                     return parsedData[getKey];
-                
-                return match;
+                else
+                    return match;
             });
         }
     }

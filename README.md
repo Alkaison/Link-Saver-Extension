@@ -1,4 +1,4 @@
-# Link Saver - Chrome Extension [(v0.0.3)](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v0.0.3)
+# Link Saver - Powerful Chrome Extension [**(v0.0.3)**](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v0.0.3)
 
 The Link Saver Chrome Extension is a powerful tool designed to help users save their social media handle links and conveniently access them whenever needed. With this extension, users can store their social media account URLs and easily insert them into any input box by using simple shortcuts.
 
@@ -7,11 +7,7 @@ The Link Saver Chrome Extension is a powerful tool designed to help users save t
 - Save social media account links: Users can add and store their social media handle links within the extension popup.
 - Shortcut substitution: By typing specific shortcuts such as `$twitter` or `$linkedin` in any input box, the corresponding shortcut will be replaced with the user's saved link for that social media platform.
 - Easy management: The extension provides a user-friendly interface for adding and deleting social media account links.
-- Secure storage: Social media account links are securely stored within the extension and remain accessible only to the user.
-
-## Disclaimer ⚠️
-
-The Social Media Link Saver Chrome Extension is currently under development. While we strive to provide a stable and reliable product, there may be occasional bugs or limitations. We appreciate your understanding and patience as we work towards improving the extension.
+- Secure storage: Social media account links are securely stored within the browsers storage and remain accessible only to the user.
 
 ## Getting Started
 

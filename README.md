@@ -1,6 +1,22 @@
-# Link Saver - Powerful Chrome Extension [**(v0.0.3)**](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v0.0.3)
+# Link Saver - Powerful Chrome Extension [**(v1.0.0)**](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v1.0.0)
+
+![Static Badge](https://img.shields.io/badge/Chrome-Extension-blue)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Alkaison/Link-Saver-Extension/main)
+![GitHub Repo stars](https://img.shields.io/github/stars/Alkaison/Link-Saver-Extension)
+![GitHub forks](https://img.shields.io/github/forks/Alkaison/Link-Saver-Extension)
+![Static Badge](https://img.shields.io/badge/Maintained-Yes-blue)
 
 The Link Saver Chrome Extension is a powerful tool designed to help users save their social media handle links and conveniently access them whenever needed. With this extension, users can store their social media account URLs and easily insert them into any input box by using simple shortcuts.
+
+## Table of contents
+
+- [Table of contents](#table-of-contents)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage Guide](#usage)
+- [Contribution](#contribution)
+- [License](#license)
+- [Feedback](#feedback)
 
 ## Features
 
@@ -9,15 +25,16 @@ The Link Saver Chrome Extension is a powerful tool designed to help users save t
 - Easy management: The extension provides a user-friendly interface for adding and deleting social media account links.
 - Secure storage: Social media account links are securely stored within the browsers storage and remain accessible only to the user.
 
-## Getting Started
+## Installation 
 
-To get started with the Link Saver Chrome Extension, follow these steps:
+I will be adding the extension to the Extension App Stores soon.
 
-1. Clone or download the repository to your local machine.
-2. Open Google Chrome and navigate to `chrome://extensions`.
-3. Enable Developer Mode by toggling the switch at the top right corner.
-4. Click on "Load unpacked" and select the directory where the extension files are located.
-5. The extension will be added to Chrome, and its icon will appear in the toolbar.
+1. Download the latest release from <https://github.com/Alkaison/Link-Saver-Extension/releases>
+2. Extract the zip file to any directory you'd like, though you need to make sure the directory is not deleted while you want to use the extension.
+3. Go to extensions page in Chrome (URL: `chrome://extensions`)
+4. Enable Developer Mode by toggling the switch at the top right corner.
+5. Click on "Load unpacked" and select the directory where the extension files are located.
+6. The extension will be added to Chrome, and its icon will appear in the toolbar.
 
 ## Usage
 
@@ -25,7 +42,7 @@ Once the extension is installed, follow these steps to save and use your social 
 
 1. Click on the extension icon in the Chrome toolbar to open the extension popup.
 2. In the popup, click on the "Add Link" button.
-3. Enter a label for the social media platform (e.g., "Twitter") and the corresponding URL for your account.
+3. Enter a label for the social media platform (e.g. "twitter", "linkedin") and the corresponding URL for your account.
 4. Click "Confirm" to store the link.
 5. Repeat steps 2-4 for any other social media accounts you wish to save.
 6. To use a saved link, simply type the corresponding shortcut (e.g., `$twitter` or `$linkedin`) in any input box, and it will be replaced with the saved link.
@@ -43,6 +60,6 @@ Contributions to the Link Saver Chrome Extension are welcome! If you have any id
 
 This project is licensed under the [**MIT License**](./LICENSE).
 
-## Feedback and Support
+## Feedback 
 
 If you encounter any issues or have suggestions for improvements, please [open an issue](https://github.com/Alkaison/Link-Saver-Extension/issues) on the GitHub repository page. We appreciate your feedback and will do our best to address any concerns.

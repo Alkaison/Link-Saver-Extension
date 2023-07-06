@@ -6,12 +6,14 @@ const linkContainer = document.querySelector(".links-container");
 const inputContainer = document.querySelector(".addNewLink");
 const confirmBtn = document.querySelector(".confirmInput");
 
+// enable input box for user 
 const getNewLink = () => {
     inputContainer.style.display = "flex";
     addNewLinkBtn.setAttribute("disabled", "true");
     addNewLinkBtn.style.cursor = "not-allowed";
 }
 
+// save the data into browser storage 
 const saveNewLink = (username, link) => {
 
     // Convert the username and link to strings 
@@ -28,6 +30,7 @@ const saveNewLink = (username, link) => {
     });
 }
 
+// delete the data from browser storage 
 const deleteLink = (linkData) => {
     const linkName = linkData.querySelector(".link-title").textContent.substring(1);
 
@@ -36,6 +39,7 @@ const deleteLink = (linkData) => {
     });
 }
 
+// handle input error messages 
 const validateInputs = () => {
     let emptyInput = false;
 
@@ -64,6 +68,7 @@ const validateInputs = () => {
         saveNewLink(nameInput.value, linkInput.value);
 }
 
+// disable the input boxes 
 const clearInputs = () => {
 
     // clear the inputs 
@@ -92,7 +97,7 @@ taskSectionBtn.addEventListener("click", (e) => {
 
 });
 
-// check clicked button 
+// check confirmation button 
 confirmBtn.addEventListener("click", (e) => {
     const clickedBtn = e.target;
     const getClassName = clickedBtn.className;
@@ -103,7 +108,7 @@ confirmBtn.addEventListener("click", (e) => {
         clearInputs();
 });
 
-// check delete button click 
+// check delete button click for data 
 linkContainer.addEventListener("click", (e) => {
 
     const getClickedLink = (e.target.tagName === "BUTTON" && e.target.className === "link-delete") ? e.target.parentElement.parentElement : (e.target.className === "fa-solid fa-trash") ? e.target.parentElement.parentElement.parentElement : null;

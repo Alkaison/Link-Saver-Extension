@@ -1,21 +1,19 @@
 let intervalTimer;
 
-// Load key-value pairs data from Chrome local storage 
+// Load key-value pairs data from browser local storage 
 const loadData = () => {
     return new Promise((resolve) => {
         if (typeof chrome !== "undefined" && chrome.storage && chrome.storage.local)
         {
             chrome.storage.local.get(null, (result) => {
-                if (chrome.runtime.lastError) {
+                if (chrome.runtime.lastError)
                     resolve([]);
-                } else {
+                else
                     resolve(result);
-                }
             });
         } 
-        else {
+        else
             resolve([]);
-        }
     });
 }
 
@@ -25,14 +23,14 @@ const checkInputElement = async (e) => {
     const isInputBox = e.target.tagName === "INPUT";
     const isTextBox = e.target.tagName === "TEXTAREA";
 
-    if (isInputBox || isTextBox) {
+    if (isInputBox || isTextBox)
+    {
         const inputElement = e.target;
         const value = inputElement.value;
 
         const getIndexOfSign = value.lastIndexOf("$");
 
-        if (getIndexOfSign !== -1)
-        {
+        if (getIndexOfSign !== -1) {
             const jsonData = await loadData();
             const parsedData = JSON.parse(JSON.stringify(jsonData));
 

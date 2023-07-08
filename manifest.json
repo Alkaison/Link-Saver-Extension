@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Link Saver",
     "description": "Link Saver: A Chrome extension for saving social media handle links, providing quick access through handy shortcuts.",
-    "version": "0.0.3",
+    "version": "1.0.0",
     "action": {
         "default_popup": "./popup/index.html",
         "default_icon": "./images/icon.png"

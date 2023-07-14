@@ -27,7 +27,7 @@ The Link Saver Chrome Extension is a powerful tool designed to help users save t
 
 ## Installation 
 
-I will be adding the extension to the Extension App Stores soon.
+🌟 Get Extension from Microsoft Edge Add-ons Store: <https://microsoftedge.microsoft.com/addons/detail/link-saver/jgboclmgidjapblhelhmfdiabiiihaaf?hl=en-US>
 
 1. Download the latest release from <https://github.com/Alkaison/Link-Saver-Extension/releases>
 2. Extract the zip file to any directory you'd like, though you need to make sure the directory is not deleted while you want to use the extension.

@@ -27,20 +27,20 @@ The Link Saver Chrome Extension is a powerful tool designed to help users save t
 
 ## Installation 
 
-🌟 Get Extension from Microsoft Edge Add-ons Store: <https://microsoftedge.microsoft.com/addons/detail/link-saver/jgboclmgidjapblhelhmfdiabiiihaaf?hl=en-US>
+Follow the steps to install the **Link Saver** extension:
 
-1. Download the latest release from <https://github.com/Alkaison/Link-Saver-Extension/releases>
-2. Extract the zip file to any directory you'd like, though you need to make sure the directory is not deleted while you want to use the extension.
-3. Go to extensions page in Chrome (URL: `chrome://extensions`)
-4. Enable Developer Mode by toggling the switch at the top right corner.
-5. Click on "Load unpacked" and select the directory where the extension files are located.
-6. The extension will be added to Chrome, and its icon will appear in the toolbar.
+1. Visit the Microsoft Edge Add-ons Store by clicking on the following link: [Link Saver Extension](https://microsoftedge.microsoft.com/addons/detail/link-saver/jgboclmgidjapblhelhmfdiabiiihaaf?hl=en-US).
+2. Click on the **"Get"** button on the Microsoft Edge Add-ons Store page.
+3. A confirmation prompt will appear. Click on **"Add extension"** to install the **Link Saver** extension.
+4. The extension will be downloaded and installed automatically, and its icon will appear in the toolbar of your browser.
+
+> NOTE: it's recommended to install extensions from official sources, such as the Microsoft Edge Add-ons Store, to ensure their authenticity and security.
 
 ## Usage
 
 Once the extension is installed, follow these steps to save and use your social media account links:
 
-1. Click on the extension icon in the Chrome toolbar to open the extension popup.
+1. Click on the extension icon in the browser toolbar to open the extension popup.
 2. In the popup, click on the "Add Link" button.
 3. Enter a label for the social media platform (e.g. "twitter", "linkedin") and the corresponding URL for your account.
 4. Click "Confirm" to store the link.

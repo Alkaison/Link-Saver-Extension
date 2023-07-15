@@ -1,12 +1,15 @@
-# Link Saver - Powerful Chrome Extension [**(v1.0.0)**](https://github.com/Alkaison/Link-Saver-Extension/releases/tag/v1.0.0)
+# Link Saver - Powerful Chrome Extension [**(v1.0.0)**](https://microsoftedge.microsoft.com/addons/detail/link-saver/jgboclmgidjapblhelhmfdiabiiihaaf?hl=en-US)
 
-![Static Badge](https://img.shields.io/badge/Chrome-Extension-blue)
+![Static Badge](https://img.shields.io/badge/Published-Microsoft_Edge_Add--ons_Store-blue)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Alkaison/Link-Saver-Extension/main)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Alkaison/Link-Saver-Extension)
 ![GitHub forks](https://img.shields.io/github/forks/Alkaison/Link-Saver-Extension)
 ![Static Badge](https://img.shields.io/badge/Maintained-Yes-blue)
+![Static Badge](https://img.shields.io/badge/Chrome-Extension-blue)
 
 The Link Saver Chrome Extension is a powerful tool designed to help users save their social media handle links and conveniently access them whenever needed. With this extension, users can store their social media account URLs and easily insert them into any input box by using simple shortcuts.
+
+⭐ Microsoft Edge Add-ons Store: [Link Saver](https://microsoftedge.microsoft.com/addons/detail/link-saver/jgboclmgidjapblhelhmfdiabiiihaaf?hl=en-US)
 
 ## Table of contents
 
